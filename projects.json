@@ -1,0 +1,59 @@
+{
+  "_comment": "Update this file to reflect project changes. The index.html reads it automatically. Dates use YYYY-MM-DD format. Status: green | amber | red. Phase examples: Active Development | Testing | Deployed / Monitoring | On Hold | Archived.",
+  "lastUpdated": "2026-06-29",
+  "owner": "sdowling",
+  "projects": [
+    {
+      "id": "avid-automation",
+      "name": "avid-automation",
+      "status": "green",
+      "phase": "Deployed / Monitoring",
+      "description": "Automates Avid Media Composer project creation for the Assistant Editor team — clones season templates, builds folder trees, creates fresh bins, and adds writer-producer folders on demand throughout the season.",
+      "users": "AE Team",
+      "owner": "sdowling",
+      "repo": "avid-automation",
+      "currentVersion": null,
+      "lastActivity": "2026-06-22",
+      "notes": "Core implementation complete. Deployed to AE team. Holding for longer-term feedback before planning version updates. Show-specific data lives outside the repo in gitignored local_data/.",
+      "subtasks": [],
+      "activityLog": [
+        { "date": "2026-06-22", "note": "Keep-Awake script updated" },
+        { "date": "2026-06-16", "note": "Scripts and .env.example refreshed" },
+        { "date": "2026-06-08", "note": "Day-to-day service management guide added" },
+        { "date": "2026-06-02", "note": "Test suite updated" },
+        { "date": "2026-05-21", "note": "Config updated" },
+        { "date": "2026-05-13", "note": "Source modules updated" },
+        { "date": "2026-05-05", "note": "Docs updated" },
+        { "date": "2026-05-01", "note": "README and requirements locked" },
+        { "date": "2026-04-28", "note": "View settings added" },
+        { "date": "2026-04-27", "note": "Initial project setup and venv" }
+      ]
+    },
+    {
+      "id": "end-credits-tool",
+      "name": "end-credits-tool",
+      "status": "amber",
+      "phase": "Active Development",
+      "description": "Adobe After Effects CEP panel + Python backend that converts TV end-credit source documents (PDF/DOCX/XLSX/TXT) into timed, tab-separated output for the end_credits_v5.jsx AE script. Supports deterministic per-show parsers, AI-assisted extraction, Airtable integration, and frame-math automation.",
+      "users": "PPC Group (Post-Production Coordinators/Supervisors)",
+      "owner": "sdowling",
+      "repo": "end-credits-tool",
+      "currentVersion": "0.4.1",
+      "lastActivity": "2026-06-29",
+      "notes": "v0.4.1 released today and rolling out to PPC group for testing. Focus is collecting feedback and building deterministic parsers for remaining daytime/primetime shows.",
+      "subtasks": [
+        "Build deterministic parsers for remaining shows",
+        "Collect and integrate PPC feedback on v0.4.1",
+        "Verified-bed engine (item 3: verified bed as baseline)"
+      ],
+      "activityLog": [
+        { "date": "2026-06-29", "note": "v0.4.1 – Rebalance now preserves legal + mandatory card timing" },
+        { "date": "2026-06-24", "note": "v0.4.0 – Deterministic cast-roll grouping; cast card frame minimums" },
+        { "date": "2026-06-24", "note": "v0.3.0 – PPC striping model for frame math; striping calculator panel" },
+        { "date": "2026-06-23", "note": "v0.2.1 – Editor mode (baseline-seeded prompt); name-gate fixes" },
+        { "date": "2026-06-23", "note": "v0.2.0 – First versioned release: primetime baseline, name-safety gate, Show Admin, Airtable, PPC installer" },
+        { "date": "2026-06-16", "note": "Pre-release: Airtable integration and panel packaging" }
+      ]
+    }
+  ]
+}
