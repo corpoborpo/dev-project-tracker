@@ -1,6 +1,6 @@
 {
   "_comment": "Update this file to reflect project changes. The index.html reads it automatically. Dates use YYYY-MM-DD format. Status: green | amber | red. Phase examples: Active Development | Testing | Deployed / Monitoring | On Hold | Archived.",
-  "lastUpdated": "2026-06-29",
+  "lastUpdated": "2026-06-30",
   "owner": "sdowling",
   "projects": [
     {
@@ -39,20 +39,48 @@
       "owner": "sdowling",
       "repo": "end-credits-tool",
       "currentVersion": "0.4.1",
-      "lastActivity": "2026-06-29",
-      "notes": "v0.4.1 released today and rolling out to PPC group for testing. Focus is collecting feedback and building deterministic parsers for remaining daytime/primetime shows.",
+      "lastActivity": "2026-06-30",
+      "notes": "v0.4.1 rolling out to PPC group for testing. Focus is collecting feedback and building deterministic parsers for remaining daytime/primetime shows. Improvement work is now tracked under the related end-credits-improvement-roadmap project.",
       "subtasks": [
         "Build deterministic parsers for remaining shows",
         "Collect and integrate PPC feedback on v0.4.1",
         "Verified-bed engine (item 3: verified bed as baseline)"
       ],
       "activityLog": [
+        { "date": "2026-06-30", "note": "Fire Country deterministic PDF parser shipped (95.9 STRICT on real source); purged leaky Ghosts/Georgie .xls parsers (data leakage)" },
         { "date": "2026-06-29", "note": "v0.4.1 – Rebalance now preserves legal + mandatory card timing" },
         { "date": "2026-06-24", "note": "v0.4.0 – Deterministic cast-roll grouping; cast card frame minimums" },
         { "date": "2026-06-24", "note": "v0.3.0 – PPC striping model for frame math; striping calculator panel" },
         { "date": "2026-06-23", "note": "v0.2.1 – Editor mode (baseline-seeded prompt); name-gate fixes" },
         { "date": "2026-06-23", "note": "v0.2.0 – First versioned release: primetime baseline, name-safety gate, Show Admin, Airtable, PPC installer" },
         { "date": "2026-06-16", "note": "Pre-release: Airtable integration and panel packaging" }
+      ]
+    },
+    {
+      "id": "end-credits-improvement-roadmap",
+      "name": "end-credits-improvement-roadmap",
+      "status": "green",
+      "phase": "Active Development",
+      "description": "Cross-show accuracy program for the End Credits Tool: improve credit extraction via three levers - frame timing (the universal last stage that runs after every method), deterministic-parser accuracy (name/role, card order, legal block, card count, groupings, verbatim text fidelity), and new parsers built assisted-first then promoted to deterministic when the source format allows. Sequenced by Start-of-Production dates. Related to the end-credits-tool project.",
+      "users": "PPC Group (Post-Production Coordinators/Supervisors)",
+      "owner": "sdowling",
+      "repo": "end-credits-tool",
+      "currentVersion": null,
+      "lastActivity": "2026-06-30",
+      "notes": "Follow-on to the Model Improvement Program. Guardrail: parsers read the approval-credits PDF source, never the verified .xls output (the leakage purged 2026-06-30). Live roadmap: the show-improvement-roadmap canvas + the end_credits_improvement_roadmap Cursor plan. Daytime shows are prioritized first for continuous frame-logic tuning.",
+      "subtasks": [
+        "Daytime (PIR, B&B, Y&R, Beyond the Gates, LMAD): frame-weighting gate tuning + parser edge cases",
+        "Sheriff Country S02: deterministic parser (ALL-CAPS approval-PDF cluster)",
+        "NCIS S24 / New York / Origins: probe format -> parser or assisted prompt",
+        "Marshals S02: probe format -> parser or assisted prompt",
+        "Tracker S04: assisted prompt + finisher (mixed-case source)",
+        "Fire Country S05: mine frame profile + run gate to lift dFRAME",
+        "Elsbeth / Boston Blue / FBI: assisted prompt as verified beds arrive",
+        "Georgie S03: assisted path (deterministic deferred)",
+        "Panel: paired source<->result highlight for PPCs (feasibility, pending feedback)"
+      ],
+      "activityLog": [
+        { "date": "2026-06-30", "note": "Roadmap created; three-lever model agreed; daytime prioritized first; Fire Country parser shipped (95.9); Ghosts/Georgie deferred" }
       ]
     }
   ]
