@@ -1,6 +1,6 @@
 {
   "_comment": "Update this file to reflect project changes. The index.html reads it automatically. Dates use YYYY-MM-DD format. Status: green | amber | red. Phase examples: Active Development | Testing | Deployed / Monitoring | On Hold | Archived.",
-  "lastUpdated": "2026-06-30",
+  "lastUpdated": "2026-07-01",
   "owner": "sdowling",
   "projects": [
     {
@@ -13,20 +13,162 @@
       "owner": "sdowling",
       "repo": "avid-automation",
       "currentVersion": null,
-      "lastActivity": "2026-06-22",
+      "lastActivity": "2026-06-16",
       "notes": "Core implementation complete. Deployed to AE team. Holding for longer-term feedback before planning version updates. Show-specific data lives outside the repo in gitignored local_data/.",
       "subtasks": [],
       "activityLog": [
-        { "date": "2026-06-22", "note": "Keep-Awake script updated" },
-        { "date": "2026-06-16", "note": "Scripts and .env.example refreshed" },
-        { "date": "2026-06-08", "note": "Day-to-day service management guide added" },
-        { "date": "2026-06-02", "note": "Test suite updated" },
-        { "date": "2026-05-21", "note": "Config updated" },
-        { "date": "2026-05-13", "note": "Source modules updated" },
-        { "date": "2026-05-05", "note": "Docs updated" },
-        { "date": "2026-05-01", "note": "README and requirements locked" },
-        { "date": "2026-04-28", "note": "View settings added" },
-        { "date": "2026-04-27", "note": "Initial project setup and venv" }
+        {
+          "date": "2026-06-16",
+          "note": "feat(airtable): add pyairtable dep and explore_airtable discovery script"
+        },
+        {
+          "date": "2026-06-16",
+          "note": "feat(slack): add /restart-avp command for remote bot restart"
+        },
+        {
+          "date": "2026-06-11",
+          "note": "fix: three production bugs â€” show folder casing, project-not-found UX, add-main edit"
+        },
+        {
+          "date": "2026-06-10",
+          "note": "feat(scripts): add avid_cli.py â€” CLI backup for all four Slack bot commands"
+        },
+        {
+          "date": "2026-06-09",
+          "note": "chore(blocks): replace internal test show names in modal placeholders"
+        },
+        {
+          "date": "2026-06-08",
+          "note": "feat(scripts): add check_san.py diagnostic for SAN connectivity and WP project discovery"
+        },
+        {
+          "date": "2026-06-08",
+          "note": "Create HOW TO MANAGE SERVICE day-to-day.txt"
+        },
+        {
+          "date": "2026-06-03",
+          "note": "feat(provisioner): discriminator-aware project resolution for frame-rate suffixes"
+        },
+        {
+          "date": "2026-06-02",
+          "note": "fix(tombstone): human-readable key order with last_actor/last_action at top"
+        },
+        {
+          "date": "2026-06-02",
+          "note": "feat(rename-avp): tombstone audit trail, actor identity, registry update offer, ack timeout fix"
+        },
+        {
+          "date": "2026-06-02",
+          "note": "feat(wp): support first-name + last-initial WP names, comma-only separation, boundary-aware retokenize"
+        },
+        {
+          "date": "2026-05-22",
+          "note": "feat(slack): add /rename-avp command with bin-lock safety"
+        },
+        {
+          "date": "2026-05-21",
+          "note": "fix(slack): save frame_rate to registry and suppress duplicate save prompt"
+        },
+        {
+          "date": "2026-05-21",
+          "note": "chore: ignore *.bak files (migration script backups)"
+        },
+        {
+          "date": "2026-05-21",
+          "note": "feat: bootstrap_show_registry script + readable YAML output"
+        },
+        {
+          "date": "2026-05-20",
+          "note": "refactor(registry): explicit schema with show_name, show_folder, frame_rates"
+        },
+        {
+          "date": "2026-05-20",
+          "note": "feat(slack): order-independent slash command parsing + year auto-correct"
+        },
+        {
+          "date": "2026-05-19",
+          "note": "Add input validation, Block Kit modals, and full Slack handler implementation"
+        },
+        {
+          "date": "2026-05-13",
+          "note": "Introduces add_main_to_project, a new public function that mirrors add_wp_to_project for MAIN folder trees. create_project now delegates all tree creation to these two functions, keeping the cloning step focused solely on the .avp and project settings files."
+        },
+        {
+          "date": "2026-05-05",
+          "note": "Create slack_ux.md"
+        },
+        {
+          "date": "2026-05-05",
+          "note": "Added logic to handle 25p project template"
+        },
+        {
+          "date": "2026-05-01",
+          "note": "Add show_provisioner orchestration layer with WP collision safety"
+        },
+        {
+          "date": "2026-05-01",
+          "note": "Fix Phase 2 WP tree: reorder folder rename + add retry for transient locks"
+        },
+        {
+          "date": "2026-05-01",
+          "note": "Hardening pass: atomic reforge, clone rollback, validation, lockfiles"
+        },
+        {
+          "date": "2026-04-30",
+          "note": "Added security routines"
+        },
+        {
+          "date": "2026-04-29",
+          "note": "Fix template cloning, add frame rate detection, consolidate SAN template"
+        },
+        {
+          "date": "2026-04-28",
+          "note": "Token capture and replace, forked tree creation"
+        },
+        {
+          "date": "2026-04-28",
+          "note": "Fix: strip AvidSharedData and MCState artifacts from cloned projects"
+        },
+        {
+          "date": "2026-04-28",
+          "note": "Update reference.avb"
+        },
+        {
+          "date": "2026-04-28",
+          "note": "added reference bin"
+        },
+        {
+          "date": "2026-04-28",
+          "note": "Implement avid_core.projects: clone and rename an Avid project"
+        },
+        {
+          "date": "2026-04-27",
+          "note": "Implement avid_core.paths: folder, file, and Avid-project utilities"
+        },
+        {
+          "date": "2026-04-27",
+          "note": "Add Python package scaffold and smoke tests"
+        },
+        {
+          "date": "2026-04-27",
+          "note": "Robust template-walker role detection + selection spec"
+        },
+        {
+          "date": "2026-04-27",
+          "note": "Add discover_shows.py utility for SAN inventory"
+        },
+        {
+          "date": "2026-04-27",
+          "note": "Define naming rules, tree schemas, and carry-forward strategy"
+        },
+        {
+          "date": "2026-04-27",
+          "note": "Add repo foundation: gitignore, README, templates, vendor schema, interface spec"
+        },
+        {
+          "date": "2026-04-23",
+          "note": "Initial commit"
+        }
       ]
     },
     {
@@ -39,21 +181,306 @@
       "owner": "sdowling",
       "repo": "end-credits-tool",
       "currentVersion": "0.4.1",
-      "lastActivity": "2026-06-30",
-      "notes": "v0.4.1 rolling out to PPC group for testing. Focus is collecting feedback and building deterministic parsers for remaining daytime/primetime shows. Improvement work is now tracked under the related end-credits-improvement-roadmap project.",
+      "lastActivity": "2026-07-01",
+      "notes": "v0.4.1 rolling out to PPC group for testing. Deterministic parser work paused pending new-season visual style changes to the credit beds. LLM extraction now routes through the Airtable worker (End Credits Tool Prompts → End Credits LLM Worker AI field) — tested live on Fire Country 407, 100% STRICT, 17.6s round-trip. OpenAI/ChatGPT provider also wired for future model comparison. Improvement work tracked under end-credits-improvement-roadmap.",
       "subtasks": [
-        "Build deterministic parsers for remaining shows",
+        "Wire Airtable worker provider into the panel 'Generate' button (one-button run)",
         "Collect and integrate PPC feedback on v0.4.1",
-        "Verified-bed engine (item 3: verified bed as baseline)"
+        "Resume deterministic parser work once new-season format is confirmed"
       ],
       "activityLog": [
-        { "date": "2026-06-30", "note": "Fire Country deterministic PDF parser shipped (95.9 STRICT on real source); purged leaky Ghosts/Georgie .xls parsers (data leakage)" },
-        { "date": "2026-06-29", "note": "v0.4.1 – Rebalance now preserves legal + mandatory card timing" },
-        { "date": "2026-06-24", "note": "v0.4.0 – Deterministic cast-roll grouping; cast card frame minimums" },
-        { "date": "2026-06-24", "note": "v0.3.0 – PPC striping model for frame math; striping calculator panel" },
-        { "date": "2026-06-23", "note": "v0.2.1 – Editor mode (baseline-seeded prompt); name-gate fixes" },
-        { "date": "2026-06-23", "note": "v0.2.0 – First versioned release: primetime baseline, name-safety gate, Show Admin, Airtable, PPC installer" },
-        { "date": "2026-06-16", "note": "Pre-release: Airtable integration and panel packaging" }
+        {
+          "date": "2026-07-01",
+          "note": "feat(providers): Airtable worker provider live — post prompt to Airtable AI field, poll for reply, finalize; tested Fire Country 407 (100 STRICT, 17.6s)"
+        },
+        {
+          "date": "2026-07-01",
+          "note": "feat(providers): OpenAI/ChatGPT provider wired; compare_llms.py eval script added"
+        },
+        {
+          "date": "2026-06-30",
+          "note": "feat(deterministic): real Fire Country PDF parser (95.9 STRICT on true source)"
+        },
+        {
+          "date": "2026-06-30",
+          "note": "fix(deterministic): remove leaky Ghosts/Georgie .xls parsers (data leakage)"
+        },
+        {
+          "date": "2026-06-30",
+          "note": "style: clear all ruff lint errors (45 -> 0)"
+        },
+        {
+          "date": "2026-06-30",
+          "note": "feat(deterministic): add Georgie & Mandy parser (100 STRICT)"
+        },
+        {
+          "date": "2026-06-30",
+          "note": "feat(deterministic): add Ghosts parser (100 STRICT)"
+        },
+        {
+          "date": "2026-06-30",
+          "note": "feat(lint): regex-safety (ReDoS) linter + project skill"
+        },
+        {
+          "date": "2026-06-29",
+          "note": "feat(release): add make_release_zip.ps1 for minimal PPC handoff"
+        },
+        {
+          "date": "2026-06-29",
+          "note": "chore: bump version to 0.4.1"
+        },
+        {
+          "date": "2026-06-29",
+          "note": "fix(frames): rebalance preserves legal + mandatory card timing"
+        },
+        {
+          "date": "2026-06-26",
+          "note": "feat(frames): per-show profile-weighted frame model behind a gated registry flag"
+        },
+        {
+          "date": "2026-06-26",
+          "note": "feat(primetime): deterministic Tracker extraction + finisher (94.5 STRICT)"
+        },
+        {
+          "date": "2026-06-26",
+          "note": "feat(deterministic): add The Price Is Right parser (100 STRICT)"
+        },
+        {
+          "date": "2026-06-26",
+          "note": "feat(deterministic): add Let's Make a Deal parser (99.2 STRICT)"
+        },
+        {
+          "date": "2026-06-26",
+          "note": "feat(eval): human-in-the-loop assisted scoring harness + scoreboard PIR/LMAD"
+        },
+        {
+          "date": "2026-06-26",
+          "note": "feat(models): history profiles, scoreboard, bed-aware prompts + det fixes"
+        },
+        {
+          "date": "2026-06-25",
+          "note": "feat(panel): rebalance-after-edit suggestion + PPC guide"
+        },
+        {
+          "date": "2026-06-25",
+          "note": "feat(panel): variant picker, F&R wildcards + find-highlight, UI simplification"
+        },
+        {
+          "date": "2026-06-25",
+          "note": "feat(panel): Find & Replace, Show Admin auto-open, striping apply, variant defs"
+        },
+        {
+          "date": "2026-06-25",
+          "note": "feat: long/short/slot bed variants + Show Admin variant fixes"
+        },
+        {
+          "date": "2026-06-25",
+          "note": "feat: verified bed as baseline, grid editor, and panel tab-edit fix"
+        },
+        {
+          "date": "2026-06-24",
+          "note": "release: v0.4.0 â€” deterministic cast-roll grouping (N actors per card)"
+        },
+        {
+          "date": "2026-06-24",
+          "note": "release: v0.3.0 â€” PPC striping frame model + panel striping calculator"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "release: v0.2.1 â€” AI-as-editor (baseline-seeded prompt) + name-gate fixes"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "release: v0.2.0"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(panel): single assessment notice; fix card-sheet cast-roll false positive"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "feat(panel): header build/backend stamp to verify loaded version"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(panel): prefer dev venv over frozen exe so live edits take effect"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(panel): drop Show Admin pre-warm; hide console window; longer wait"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(show-admin): pre-warm server on panel load; lazy-import heavy PDF deps"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(show-admin): revert bind to 127.0.0.1 to avoid Windows Firewall UAC prompt"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(show-admin): use localhost + show URL to work around corporate proxy"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(panel): clear stale banner on pull start; reliable Show Admin launch"
+        },
+        {
+          "date": "2026-06-23",
+          "note": "fix(airtable): surface blocked host in download errors + log proxy config"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(show-registry): capture Airtable show code + filename recognition"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(show-admin): new-show recognition + first-pass lifecycle + frozen-exe serve"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(panel): launch Show Admin from the panel flyout menu"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(show-admin): non-code new-show onboarding (web wizard + registry write)"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "docs(cheatsheet): assist indicator, baseline path, and name check"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(panel): assist-likelihood indicator, primetime baseline, name gate"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(routing): primetime provider + content triage + preprocess/gate CLI"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(primetime): deterministic Tier-2 baseline + verbatim name gate"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(eval,card_sheet): content-normalized eval + primetime PDF preprocessing"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "fix(providers): default the automatic path to local, not anthropic"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(readers): support legacy .xls sources (Let's Make a Deal)"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(deterministic): add The Bold and the Beautiful per-show parser"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(readers): support legacy .doc (Word 97-2003) with no Word install"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "feat(panel): 'Open in Airtable' button on source pane replaces Pop out"
+        },
+        {
+          "date": "2026-06-22",
+          "note": "fix(panel): replace source preview pop-up with docked QC split pane"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat(panel): deterministic 'Generate directly (no AI)' button + previewer tweaks"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat(panel): in-AE source previewer (no native reader needed)"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat(prompt): cast-roll (LONG cut) grouping guidance in SYSTEM_PROMPT"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat(panel): pre-flight cast-roll / deterministic detection banner"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat: Beyond the Gates deterministic parser + cast-roll detector"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat: two-column layout reflow for long single-role lists (both paths)"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "test: verify Y&R deterministic parser against live Airtable jobs"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat: deterministic per-show parsers (Young & Restless PoC) + IT gateway-request note"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat(panel): one-click 'Copy & open Claude' for the Assisted flow"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat(panel): View source button + Hide inputs folds drop zone/settings for QC room"
+        },
+        {
+          "date": "2026-06-18",
+          "note": "feat: evaluate local Ollama path, default to qwen2.5:14b, drop llama3.1:8b"
+        },
+        {
+          "date": "2026-06-17",
+          "note": "feat: per-user Airtable PAT with DPAPI credential store and Connect form"
+        },
+        {
+          "date": "2026-06-17",
+          "note": "Fix REPO_ROOT resolution through Windows junction; improve Airtable feedback"
+        },
+        {
+          "date": "2026-06-15",
+          "note": "Record per-user Airtable auth plan in SPEC"
+        },
+        {
+          "date": "2026-06-15",
+          "note": "Fix .env loading for frozen exe"
+        },
+        {
+          "date": "2026-06-15",
+          "note": "Add tester cheat sheet"
+        },
+        {
+          "date": "2026-06-15",
+          "note": "Freeze backend to exe, add status button, Python-free installer"
+        },
+        {
+          "date": "2026-06-15",
+          "note": "Add show registry, freeze-aware paths, and lightweight install/uninstall"
+        },
+        {
+          "date": "2026-06-15",
+          "note": "Phase 4 CEP panel + frame-math improvements"
+        },
+        {
+          "date": "2026-06-12",
+          "note": "Phase 3 backend: provider seam, Assisted-mode CLI, Airtable I/O, frame-math fix"
+        },
+        {
+          "date": "2026-06-10",
+          "note": "Phase 2: file readers, comparison module, regression harness; fix source encoding to UTF-8"
+        },
+        {
+          "date": "2026-06-10",
+          "note": "Phase 1: package scaffold, migrate extractor, frame-math tests"
+        },
+        {
+          "date": "2026-06-10",
+          "note": "Phase 0: spec and scaffold"
+        }
       ]
     },
     {
@@ -66,21 +493,82 @@
       "owner": "sdowling",
       "repo": "end-credits-tool",
       "currentVersion": null,
-      "lastActivity": "2026-06-30",
-      "notes": "Follow-on to the Model Improvement Program. Guardrail: parsers read the approval-credits PDF source, never the verified .xls output (the leakage purged 2026-06-30). Live roadmap: the show-improvement-roadmap canvas + the end_credits_improvement_roadmap Cursor plan. Daytime shows are prioritized first for continuous frame-logic tuning.",
+      "lastActivity": "2026-07-01",
+      "notes": "Follow-on to the Model Improvement Program. Deterministic parser work paused — new season will bring visual style changes to credit beds, so parsers will need updating once the format is confirmed. Current focus is the Airtable worker integration path. Guardrail: parsers read the approval-credits PDF source, never the verified .xls output (leakage purged 2026-06-30). Live roadmap: show-improvement-roadmap canvas + end_credits_improvement_roadmap Cursor plan.",
       "subtasks": [
-        "Daytime (PIR, B&B, Y&R, Beyond the Gates, LMAD): frame-weighting gate tuning + parser edge cases",
-        "Sheriff Country S02: deterministic parser (ALL-CAPS approval-PDF cluster)",
-        "NCIS S24 / New York / Origins: probe format -> parser or assisted prompt",
-        "Marshals S02: probe format -> parser or assisted prompt",
+        "Resume daytime parser/frame-logic work once new-season format confirmed",
+        "Sheriff Country S02: deterministic parser (ALL-CAPS cluster) — deferred",
         "Tracker S04: assisted prompt + finisher (mixed-case source)",
         "Fire Country S05: mine frame profile + run gate to lift dFRAME",
-        "Elsbeth / Boston Blue / FBI: assisted prompt as verified beds arrive",
-        "Georgie S03: assisted path (deterministic deferred)",
-        "Panel: paired source<->result highlight for PPCs (feasibility, pending feedback)"
+        "Panel: paired source<->result highlight for PPCs (pending feedback)"
       ],
       "activityLog": [
-        { "date": "2026-06-30", "note": "Roadmap created; three-lever model agreed; daytime prioritized first; Fire Country parser shipped (95.9); Ghosts/Georgie deferred" }
+        {
+          "date": "2026-07-01",
+          "note": "Deterministic parser development paused pending new-season visual style changes; pivoting to Airtable worker integration as primary LLM path"
+        },
+        {
+          "date": "2026-06-30",
+          "note": "Roadmap created; three-lever model agreed; daytime prioritized first; Fire Country parser shipped (95.9); Ghosts/Georgie deferred"
+        }
+      ]
+    },
+    {
+      "id": "ae-script-format-update",
+      "name": "ae-script-format-update",
+      "status": "amber",
+      "phase": "Planning",
+      "description": "Update the end_credits_v5.jsx After Effects script to process end credits in a new format. Keeps the AE build step current with changes coming out of the end-credits-tool backend.",
+      "users": "PPC Group",
+      "owner": "sdowling",
+      "repo": null,
+      "currentVersion": null,
+      "lastActivity": "2026-07-01",
+      "notes": "Requirements and scope TBD. Dependent on identifying what the new format demands from the AE script side.",
+      "subtasks": [],
+      "activityLog": [
+        { "date": "2026-07-01", "note": "Project added to tracker" }
+      ]
+    },
+    {
+      "id": "airtable-document-model-training",
+      "name": "airtable-document-model-training",
+      "status": "amber",
+      "phase": "Planning",
+      "description": "Use Airtable AI calls to train or fine-tune document models on end-credit source material, improving extraction accuracy without a direct API key in the production environment.",
+      "users": "sdowling",
+      "owner": "sdowling",
+      "repo": null,
+      "currentVersion": null,
+      "lastActivity": "2026-07-01",
+      "notes": "Exploratory. Investigating whether Airtable's AI features can act as the model-training surface, using the existing credits base as training data.",
+      "subtasks": [],
+      "activityLog": [
+        { "date": "2026-07-01", "note": "Project added to tracker" }
+      ]
+    },
+    {
+      "id": "airtable-prompt-relay",
+      "name": "airtable-prompt-relay",
+      "status": "green",
+      "phase": "Active Development",
+      "description": "Routes end-credits extraction prompts through Airtable AI fields instead of direct API calls — the panel posts a prompt to 'End Credits Tool Prompts', an Airtable automation calls Claude Sonnet and writes the reply to 'End Credits LLM Worker', and the Python backend polls for the result and finalizes it. Removes the manual copy-paste step in the Assisted flow; no API key needed on PPC machines.",
+      "users": "PPC Group",
+      "owner": "sdowling",
+      "repo": "end-credits-tool",
+      "currentVersion": null,
+      "lastActivity": "2026-07-01",
+      "notes": "Core implemented and tested. AirtableWorkerProvider in providers.py posts the full extraction prompt, polls the Airtable AI field (state: generated), strips the code fence, and returns the clean draft for normal frame-math finishing. Live test: Fire Country 407, 100% STRICT/NAME/LEGAL, 17.6s round-trip. Next step: wire into the panel Generate button for one-click runs.",
+      "subtasks": [
+        "Wire AirtableWorkerProvider into panel 'Generate' button (one-button run)",
+        "Add multi-worker support for side-by-side model comparison (create second AI field + worker)"
+      ],
+      "activityLog": [
+        {
+          "date": "2026-07-01",
+          "note": "AirtableWorkerProvider shipped; post_llm_prompt / poll_llm_result / clear_llm_fields on AirtableClient; Airtable AI field state handling (generated/complete); live test Fire Country 407 passed (100 STRICT, 17.6s)"
+        },
+        { "date": "2026-07-01", "note": "Project added to tracker" }
       ]
     }
   ]
